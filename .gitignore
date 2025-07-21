@@ -1,0 +1,36 @@
+# Rust
+target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Nix
+result/
+result-*
+
+# Embedded development
+*.bin
+*.elf
+*.hex
+*.uf2
+*.map
+
+# Debugging
+*.gdb_history
+.gdb_history
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
