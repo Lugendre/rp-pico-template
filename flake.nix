@@ -12,7 +12,7 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, rust-overlay, claude-code }:
-    flake-utils.lib.eachDefaultSystem (system:
+    (flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
@@ -45,10 +45,10 @@
             flip-link
           ];
         };
-
-        templates.default = {
-          path = ./.;
-          description = "Rust development template for Raspberry Pi Pico";
-        };
-      });
+      })) // {
+      templates.default = {
+        path = ./.;
+        description = "Rust development template for Raspberry Pi Pico";
+      };
+    };
 }
