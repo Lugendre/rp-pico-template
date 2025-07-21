@@ -46,9 +46,13 @@
           ];
         };
       })) // {
-      templates.default = {
-        path = ./.;
-        description = "Rust development template for Raspberry Pi Pico";
+      templates = {
+        default = {
+          path = ./.;
+          description = "Rust development template for Raspberry Pi Pico";
+        };
       };
+      
+      defaultTemplate = self.templates.default;
     };
 }
